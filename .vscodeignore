@@ -1,0 +1,8 @@
+.gitignore
+.vscode/**
+src/**
+tsconfig.json
+package-lock.json
+node_modules/**
+out/extension copy.js
+out/extension copy.js.map

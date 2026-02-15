@@ -7,7 +7,7 @@
   "icon": "assets/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/erogluyusuf/vclaw"
+    "url": "https://github.com/erogluyusuf/vClaw.git"
   },
   "engines": {
     "vscode": "^1.85.0"
@@ -16,7 +16,10 @@
     "Other"
   ],
   "activationEvents": [
-    "*"
+    "onCommand:vclaw.markContent",
+    "onCommand:vclaw.markParent",
+    "onCommand:vclaw.markGrandparent",
+    "onCommand:vclaw.clearMarks"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -56,10 +59,22 @@
         }
       ],
       "vclaw.mainMenu": [
-        { "command": "vclaw.markContent", "group": "1_vclaw" },
-        { "command": "vclaw.markParent", "group": "2_vclaw" },
-        { "command": "vclaw.markGrandparent", "group": "3_vclaw" },
-        { "command": "vclaw.clearMarks", "group": "4_vclaw" }
+        {
+          "command": "vclaw.markContent",
+          "group": "1_vclaw"
+        },
+        {
+          "command": "vclaw.markParent",
+          "group": "2_vclaw"
+        },
+        {
+          "command": "vclaw.markGrandparent",
+          "group": "3_vclaw"
+        },
+        {
+          "command": "vclaw.clearMarks",
+          "group": "4_vclaw"
+        }
       ]
     }
   },
