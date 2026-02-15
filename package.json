@@ -1,0 +1,75 @@
+{
+  "name": "vclaw",
+  "displayName": "vClaw",
+  "description": "Smart code scope pincer using indentation and structure analysis.",
+  "version": "0.1.0",
+  "publisher": "erogluyusuf",
+  "icon": "assets/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erogluyusuf/vclaw"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vclaw.markContent",
+        "title": "vClaw: Snap Scope (Inner)",
+        "shortTitle": "Snap"
+      },
+      {
+        "command": "vclaw.markParent",
+        "title": "vClaw: Grip Parent (Outer)",
+        "shortTitle": "Grip"
+      },
+      {
+        "command": "vclaw.markGrandparent",
+        "title": "vClaw: Clench Global (Root)",
+        "shortTitle": "Clench"
+      },
+      {
+        "command": "vclaw.clearMarks",
+        "title": "vClaw: Release (Clear)",
+        "shortTitle": "Release"
+      }
+    ],
+    "submenus": [
+      {
+        "id": "vclaw.mainMenu",
+        "label": "vClaw"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "submenu": "vclaw.mainMenu",
+          "group": "navigation"
+        }
+      ],
+      "vclaw.mainMenu": [
+        { "command": "vclaw.markContent", "group": "1_vclaw" },
+        { "command": "vclaw.markParent", "group": "2_vclaw" },
+        { "command": "vclaw.markGrandparent", "group": "3_vclaw" },
+        { "command": "vclaw.clearMarks", "group": "4_vclaw" }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.7.1",
+    "typescript": "^5.3.3"
+  }
+}
