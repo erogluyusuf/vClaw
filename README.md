@@ -3,6 +3,8 @@
 ![Project Status](https://img.shields.io/badge/Status-Stable-success)
 ![Platform](https://img.shields.io/badge/Platform-Visual%20Studio%20Code-blue)
 ![License](https://img.shields.io/badge/License-MIT-purple)
+[![Marketplace](https://img.shields.io/visual-studio-marketplace/v/erogluyusuf.vclaw?label=VS%20Code%20Marketplace&color=orange)](https://marketplace.visualstudio.com/items?itemName=erogluyusuf.vclaw)
+[![Installs](https://img.shields.io/visual-studio-marketplace/i/erogluyusuf.vclaw)](https://marketplace.visualstudio.com/items?itemName=erogluyusuf.vclaw)
 
 **vClaw** is a high-performance Visual Studio Code extension designed to master code navigation through structural intelligence. By using advanced indentation analysis and scope detection, it allows developers to "grab" and visualize complex code blocks instantly, increasing refactoring speed and structural awareness.
 
